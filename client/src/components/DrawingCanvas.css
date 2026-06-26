@@ -1,0 +1,119 @@
+.canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.drawing-canvas {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 800 / 520;
+  border-radius: 12px;
+  background: #ffffff;
+  display: block;
+  touch-action: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+.drawer-cursor { cursor: crosshair; }
+.viewer-cursor { cursor: default; }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.tool-section {
+  display: flex;
+  gap: 6px;
+}
+
+.tool-btn {
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg3);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.15s;
+}
+.tool-btn:hover { border-color: var(--primary); background: rgba(108,99,255,0.2); }
+.tool-btn.active { border-color: var(--primary); background: var(--primary); }
+.tool-btn.danger:hover { border-color: var(--error); background: rgba(255,101,132,0.2); }
+
+.size-section {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.size-btn {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.size-btn:hover { border-color: var(--primary); }
+.size-btn.active { border-color: var(--primary); background: rgba(108,99,255,0.3); }
+
+.size-dot {
+  border-radius: 50%;
+  background: var(--text);
+  min-width: 3px;
+  min-height: 3px;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+  max-width: 240px;
+}
+
+.color-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s;
+  border: 2px solid transparent !important;
+  outline: none;
+}
+.color-swatch:hover { transform: scale(1.2); }
+.color-swatch.active {
+  transform: scale(1.2);
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.current-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+.preview-dot {
+  border-radius: 50%;
+  transition: all 0.15s;
+  min-width: 6px;
+  min-height: 6px;
+}

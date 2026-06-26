@@ -1,0 +1,90 @@
+.gameover-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+}
+
+.go-container {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  padding: 36px;
+  animation: fadeIn 0.5s ease;
+}
+
+.go-confetti {
+  font-size: 32px;
+  margin-bottom: 12px;
+  animation: bounce 1s ease-in-out infinite;
+  letter-spacing: 8px;
+}
+
+.go-title {
+  font-size: 40px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+}
+
+.go-winner {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(255,101,132,0.15));
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.winner-crown { font-size: 40px; }
+.winner-avatar { font-size: 52px; margin: 8px 0; }
+.winner-name { font-size: 26px; font-weight: 800; }
+.winner-score { font-size: 20px; color: var(--warning); font-weight: 700; margin: 4px 0; }
+.winner-label { font-size: 16px; color: var(--accent); }
+
+.leaderboard { margin-bottom: 28px; }
+
+.lb-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.lb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lb-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+.lb-item:hover { transform: translateX(4px); }
+.lb-item.rank-1 { border-color: gold; background: rgba(255,215,0,0.1); }
+.lb-item.rank-2 { border-color: silver; background: rgba(192,192,192,0.1); }
+.lb-item.rank-3 { border-color: #cd7f32; background: rgba(205,127,50,0.1); }
+
+.lb-rank { font-size: 22px; width: 36px; }
+.lb-avatar { font-size: 22px; }
+.lb-name { flex: 1; font-weight: 600; text-align: left; }
+.lb-score { font-weight: 800; color: var(--warning); font-size: 16px; }
+
+.go-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}

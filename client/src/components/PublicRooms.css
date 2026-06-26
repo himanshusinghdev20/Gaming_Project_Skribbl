@@ -1,0 +1,77 @@
+.public-rooms-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.pr-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.pr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.pr-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.pr-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px;
+  color: var(--text-dim);
+}
+.waiting-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.pr-empty {
+  text-align: center;
+  padding: 60px;
+  color: var(--text-dim);
+}
+.pr-empty h3 { font-size: 20px; margin-bottom: 8px; color: var(--text); }
+
+.pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pr-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.pr-code {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: monospace;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.pr-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
